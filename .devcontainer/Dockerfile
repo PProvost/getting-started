@@ -58,5 +58,5 @@ ENV PATH "/work/bin:/work/gcc-arm-none-eabi-9-2019-q4-major/bin:$PATH"
 # We can use this later when/if we make this a reusable GH action
 # ENTRYPOINT [ "/entrypoint.sh" ]
 
-# Drop into bash for interactivity
-CMD [ "/bin/bash" ]
+# Drop into bash instead of sh for interactivity
+ENV SHELL /bin/bash
