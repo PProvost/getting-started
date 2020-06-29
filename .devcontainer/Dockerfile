@@ -53,7 +53,7 @@ RUN wget --no-check-certificate https://github.com/Kitware/CMake/releases/downlo
 RUN wget -qO- https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2019q4/gcc-arm-none-eabi-9-2019-q4-major-x86_64-linux.tar.bz2 | tar -xj
 
 # Update the path to include the new cmake and arm-gcc tools
-ENV PATH "/work/bin:/work/gcc-arm-none-eabi-9-2019-q4-major/bin:$PATH"
+ENV PATH "/work/bin:/work/gcc-arm-none-eabi-9-2019-q4-major/bin:${PATH}"
 
 # We can use this later when/if we make this a reusable GH action
 # ENTRYPOINT [ "/entrypoint.sh" ]
